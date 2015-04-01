@@ -7,8 +7,14 @@
 //
 
 #import "AppDelegate.h"
+#import "CharacterListViewController.h"
+
+#define kNSUUserDefaultsLastSavedKey @"kNSUUserDefaultsLastSavedKey"
 
 @interface AppDelegate ()
+
+@property NSArray *plistInitialArray;
+@property BOOL plistLaunched;
 
 @end
 
@@ -17,6 +23,44 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    // Check if the default (lost.plist) was loaded to CoreData
+    NSString *plistName = @"InitialCharactersLoaded.plist";
+    NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *fullPath = [documentsPath stringByAppendingPathComponent:plistName];
+    BOOL fileExists = [[NSFileManager defaultManager] fileExistsAtPath:fullPath];
+
+    NSLog(@"%@",documentsPath);
+
+    if (!fileExists)
+    {
+        NSLog(@"Oiiiiiieeee");
+
+        NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"lost" ofType:@"plist"];
+        self.plistInitialArray = [NSArray arrayWithContentsOfFile:plistPath];
+
+        for (NSDictionary *lost in self.plistInitialArray)
+        {
+            NSManagedObject *character = [NSEntityDescription insertNewObjectForEntityForName:@"Character" inManagedObjectContext:self.managedObjectContext];
+            [character setValue:lost[@"passenger"] forKey:@"name"];
+            [character setValue:lost[@"actor"] forKey:@"actor"];
+            [self.managedObjectContext save:nil];
+        }
+
+        // create plist file
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        [userDefaults setObject:[NSDate date] forKey:kNSUUserDefaultsLastSavedKey];
+        [userDefaults synchronize];
+        NSURL *plist = [[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject] URLByAppendingPathComponent:plistName];
+        NSArray *arrayPlist = [[NSArray alloc] initWithObjects:@"loaded", nil];
+        [arrayPlist writeToURL:plist atomically:YES];
+    }
+
+    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+    CharacterListViewController *controller = (CharacterListViewController *)navigationController.topViewController;
+    // dependency injection?
+    controller.managedObjectContext = self.managedObjectContext;
+
     return YES;
 }
 

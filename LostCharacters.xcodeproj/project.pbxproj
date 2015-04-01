@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		560AEC331ACB8A4E00B894D8 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 560AEC321ACB8A4E00B894D8 /* Character.m */; };
+		560AEC361ACB8AC300B894D8 /* Character+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 560AEC351ACB8AC300B894D8 /* Character+CoreData.m */; };
+		560AEC381ACC184600B894D8 /* lost.plist in Resources */ = {isa = PBXBuildFile; fileRef = 560AEC371ACC184600B894D8 /* lost.plist */; };
 		564D0A3D1ACB212B00BF099D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 564D0A3C1ACB212B00BF099D /* main.m */; };
 		564D0A401ACB212B00BF099D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 564D0A3F1ACB212B00BF099D /* AppDelegate.m */; };
 		564D0A431ACB212B00BF099D /* LostCharacters.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 564D0A411ACB212B00BF099D /* LostCharacters.xcdatamodeld */; };
-		564D0A461ACB212B00BF099D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 564D0A451ACB212B00BF099D /* ViewController.m */; };
+		564D0A461ACB212B00BF099D /* CharacterListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 564D0A451ACB212B00BF099D /* CharacterListViewController.m */; };
 		564D0A491ACB212B00BF099D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 564D0A471ACB212B00BF099D /* Main.storyboard */; };
 		564D0A4B1ACB212B00BF099D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 564D0A4A1ACB212B00BF099D /* Images.xcassets */; };
 		564D0A4E1ACB212B00BF099D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 564D0A4C1ACB212B00BF099D /* LaunchScreen.xib */; };
@@ -28,14 +31,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		560AEC311ACB8A4E00B894D8 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
+		560AEC321ACB8A4E00B894D8 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
+		560AEC341ACB8AC300B894D8 /* Character+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Character+CoreData.h"; sourceTree = "<group>"; };
+		560AEC351ACB8AC300B894D8 /* Character+CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Character+CoreData.m"; sourceTree = "<group>"; };
+		560AEC371ACC184600B894D8 /* lost.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = lost.plist; sourceTree = "<group>"; };
 		564D0A371ACB212B00BF099D /* LostCharacters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostCharacters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		564D0A3B1ACB212B00BF099D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		564D0A3C1ACB212B00BF099D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		564D0A3E1ACB212B00BF099D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		564D0A3F1ACB212B00BF099D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		564D0A421ACB212B00BF099D /* LostCharacters.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LostCharacters.xcdatamodel; sourceTree = "<group>"; };
-		564D0A441ACB212B00BF099D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		564D0A451ACB212B00BF099D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		564D0A441ACB212B00BF099D /* CharacterListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CharacterListViewController.h; sourceTree = "<group>"; };
+		564D0A451ACB212B00BF099D /* CharacterListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CharacterListViewController.m; sourceTree = "<group>"; };
 		564D0A481ACB212B00BF099D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		564D0A4A1ACB212B00BF099D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		564D0A4D1ACB212B00BF099D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -62,6 +70,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		560AEC2E1ACB885700B894D8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				564D0A441ACB212B00BF099D /* CharacterListViewController.h */,
+				564D0A451ACB212B00BF099D /* CharacterListViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		560AEC2F1ACB885C00B894D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				564D0A411ACB212B00BF099D /* LostCharacters.xcdatamodeld */,
+				560AEC311ACB8A4E00B894D8 /* Character.h */,
+				560AEC321ACB8A4E00B894D8 /* Character.m */,
+				560AEC341ACB8AC300B894D8 /* Character+CoreData.h */,
+				560AEC351ACB8AC300B894D8 /* Character+CoreData.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		560AEC301ACB886100B894D8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				564D0A471ACB212B00BF099D /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		564D0A2E1ACB212B00BF099D = {
 			isa = PBXGroup;
 			children = (
@@ -85,12 +122,11 @@
 			children = (
 				564D0A3E1ACB212B00BF099D /* AppDelegate.h */,
 				564D0A3F1ACB212B00BF099D /* AppDelegate.m */,
-				564D0A441ACB212B00BF099D /* ViewController.h */,
-				564D0A451ACB212B00BF099D /* ViewController.m */,
-				564D0A471ACB212B00BF099D /* Main.storyboard */,
+				560AEC2F1ACB885C00B894D8 /* Model */,
+				560AEC2E1ACB885700B894D8 /* Controller */,
+				560AEC301ACB886100B894D8 /* View */,
 				564D0A4A1ACB212B00BF099D /* Images.xcassets */,
 				564D0A4C1ACB212B00BF099D /* LaunchScreen.xib */,
-				564D0A411ACB212B00BF099D /* LostCharacters.xcdatamodeld */,
 				564D0A3A1ACB212B00BF099D /* Supporting Files */,
 			);
 			path = LostCharacters;
@@ -101,6 +137,7 @@
 			children = (
 				564D0A3B1ACB212B00BF099D /* Info.plist */,
 				564D0A3C1ACB212B00BF099D /* main.m */,
+				560AEC371ACC184600B894D8 /* lost.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -204,6 +241,7 @@
 			files = (
 				564D0A491ACB212B00BF099D /* Main.storyboard in Resources */,
 				564D0A4E1ACB212B00BF099D /* LaunchScreen.xib in Resources */,
+				560AEC381ACC184600B894D8 /* lost.plist in Resources */,
 				564D0A4B1ACB212B00BF099D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,8 +261,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				564D0A431ACB212B00BF099D /* LostCharacters.xcdatamodeld in Sources */,
+				560AEC331ACB8A4E00B894D8 /* Character.m in Sources */,
 				564D0A401ACB212B00BF099D /* AppDelegate.m in Sources */,
-				564D0A461ACB212B00BF099D /* ViewController.m in Sources */,
+				564D0A461ACB212B00BF099D /* CharacterListViewController.m in Sources */,
+				560AEC361ACB8AC300B894D8 /* Character+CoreData.m in Sources */,
 				564D0A3D1ACB212B00BF099D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +456,7 @@
 				564D0A5F1ACB212C00BF099D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		564D0A601ACB212C00BF099D /* Build configuration list for PBXNativeTarget "LostCharactersTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +465,7 @@
 				564D0A621ACB212C00BF099D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

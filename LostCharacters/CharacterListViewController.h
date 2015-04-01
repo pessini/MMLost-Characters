@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface CharacterListViewController : UIViewController
 
-
+@property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
 @end
 
