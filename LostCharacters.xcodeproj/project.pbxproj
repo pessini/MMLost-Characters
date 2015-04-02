@@ -18,6 +18,7 @@
 		564D0A4E1ACB212B00BF099D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 564D0A4C1ACB212B00BF099D /* LaunchScreen.xib */; };
 		564D0A5A1ACB212C00BF099D /* LostCharactersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 564D0A591ACB212C00BF099D /* LostCharactersTests.m */; };
 		56D3B13E1ACCC4CF00512FA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56D3B13D1ACCC4CF00512FA1 /* Images.xcassets */; };
+		56D3B1411ACCD90000512FA1 /* CharacterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D3B1401ACCD90000512FA1 /* CharacterTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		564D0A581ACB212C00BF099D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		564D0A591ACB212C00BF099D /* LostCharactersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LostCharactersTests.m; sourceTree = "<group>"; };
 		56D3B13D1ACCC4CF00512FA1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		56D3B13F1ACCD90000512FA1 /* CharacterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterTableViewCell.h; sourceTree = "<group>"; };
+		56D3B1401ACCD90000512FA1 /* CharacterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,7 @@
 		564D0A391ACB212B00BF099D /* LostCharacters */ = {
 			isa = PBXGroup;
 			children = (
+				56D3B1421ACCD90300512FA1 /* Custom */,
 				564D0A3E1ACB212B00BF099D /* AppDelegate.h */,
 				564D0A3F1ACB212B00BF099D /* AppDelegate.m */,
 				560AEC2F1ACB885C00B894D8 /* Model */,
@@ -157,6 +161,15 @@
 				564D0A581ACB212C00BF099D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		56D3B1421ACCD90300512FA1 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				56D3B13F1ACCD90000512FA1 /* CharacterTableViewCell.h */,
+				56D3B1401ACCD90000512FA1 /* CharacterTableViewCell.m */,
+			);
+			name = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +278,7 @@
 				564D0A401ACB212B00BF099D /* AppDelegate.m in Sources */,
 				564D0A461ACB212B00BF099D /* CharacterListViewController.m in Sources */,
 				564D0A3D1ACB212B00BF099D /* main.m in Sources */,
+				56D3B1411ACCD90000512FA1 /* CharacterTableViewCell.m in Sources */,
 				5607A9D01ACC9578001BC436 /* AddCharacterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
