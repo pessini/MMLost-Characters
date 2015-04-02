@@ -30,11 +30,8 @@
     NSString *fullPath = [documentsPath stringByAppendingPathComponent:plistName];
     BOOL fileExists = [[NSFileManager defaultManager] fileExistsAtPath:fullPath];
 
-    NSLog(@"%@",documentsPath);
-
     if (!fileExists)
     {
-        NSLog(@"Oiiiiiieeee");
 
         NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"lost" ofType:@"plist"];
         self.plistInitialArray = [NSArray arrayWithContentsOfFile:plistPath];
@@ -55,11 +52,6 @@
         NSArray *arrayPlist = [[NSArray alloc] initWithObjects:@"loaded", nil];
         [arrayPlist writeToURL:plist atomically:YES];
     }
-
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    CharacterListViewController *controller = (CharacterListViewController *)navigationController.topViewController;
-    // dependency injection?
-    controller.managedObjectContext = self.managedObjectContext;
 
     return YES;
 }

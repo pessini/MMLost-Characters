@@ -18,6 +18,6 @@
 @dynamic hair_color;
 @dynamic plane_seat;
 @dynamic occupation;
-@dynamic photoData;
+@dynamic photo;
 
 @end

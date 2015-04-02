@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5607A9D01ACC9578001BC436 /* AddCharacterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5607A9CF1ACC9578001BC436 /* AddCharacterViewController.m */; };
 		560AEC331ACB8A4E00B894D8 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 560AEC321ACB8A4E00B894D8 /* Character.m */; };
-		560AEC361ACB8AC300B894D8 /* Character+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 560AEC351ACB8AC300B894D8 /* Character+CoreData.m */; };
 		560AEC381ACC184600B894D8 /* lost.plist in Resources */ = {isa = PBXBuildFile; fileRef = 560AEC371ACC184600B894D8 /* lost.plist */; };
 		564D0A3D1ACB212B00BF099D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 564D0A3C1ACB212B00BF099D /* main.m */; };
 		564D0A401ACB212B00BF099D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 564D0A3F1ACB212B00BF099D /* AppDelegate.m */; };
 		564D0A431ACB212B00BF099D /* LostCharacters.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 564D0A411ACB212B00BF099D /* LostCharacters.xcdatamodeld */; };
 		564D0A461ACB212B00BF099D /* CharacterListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 564D0A451ACB212B00BF099D /* CharacterListViewController.m */; };
 		564D0A491ACB212B00BF099D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 564D0A471ACB212B00BF099D /* Main.storyboard */; };
-		564D0A4B1ACB212B00BF099D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 564D0A4A1ACB212B00BF099D /* Images.xcassets */; };
 		564D0A4E1ACB212B00BF099D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 564D0A4C1ACB212B00BF099D /* LaunchScreen.xib */; };
 		564D0A5A1ACB212C00BF099D /* LostCharactersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 564D0A591ACB212C00BF099D /* LostCharactersTests.m */; };
+		56D3B13E1ACCC4CF00512FA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56D3B13D1ACCC4CF00512FA1 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,10 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5607A9CE1ACC9578001BC436 /* AddCharacterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCharacterViewController.h; sourceTree = "<group>"; };
+		5607A9CF1ACC9578001BC436 /* AddCharacterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCharacterViewController.m; sourceTree = "<group>"; };
 		560AEC311ACB8A4E00B894D8 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
 		560AEC321ACB8A4E00B894D8 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
-		560AEC341ACB8AC300B894D8 /* Character+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Character+CoreData.h"; sourceTree = "<group>"; };
-		560AEC351ACB8AC300B894D8 /* Character+CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Character+CoreData.m"; sourceTree = "<group>"; };
 		560AEC371ACC184600B894D8 /* lost.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = lost.plist; sourceTree = "<group>"; };
 		564D0A371ACB212B00BF099D /* LostCharacters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostCharacters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		564D0A3B1ACB212B00BF099D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,11 +45,11 @@
 		564D0A441ACB212B00BF099D /* CharacterListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CharacterListViewController.h; sourceTree = "<group>"; };
 		564D0A451ACB212B00BF099D /* CharacterListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CharacterListViewController.m; sourceTree = "<group>"; };
 		564D0A481ACB212B00BF099D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		564D0A4A1ACB212B00BF099D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		564D0A4D1ACB212B00BF099D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		564D0A531ACB212C00BF099D /* LostCharactersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LostCharactersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		564D0A581ACB212C00BF099D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		564D0A591ACB212C00BF099D /* LostCharactersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LostCharactersTests.m; sourceTree = "<group>"; };
+		56D3B13D1ACCC4CF00512FA1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +73,8 @@
 		560AEC2E1ACB885700B894D8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5607A9CE1ACC9578001BC436 /* AddCharacterViewController.h */,
+				5607A9CF1ACC9578001BC436 /* AddCharacterViewController.m */,
 				564D0A441ACB212B00BF099D /* CharacterListViewController.h */,
 				564D0A451ACB212B00BF099D /* CharacterListViewController.m */,
 			);
@@ -85,8 +87,6 @@
 				564D0A411ACB212B00BF099D /* LostCharacters.xcdatamodeld */,
 				560AEC311ACB8A4E00B894D8 /* Character.h */,
 				560AEC321ACB8A4E00B894D8 /* Character.m */,
-				560AEC341ACB8AC300B894D8 /* Character+CoreData.h */,
-				560AEC351ACB8AC300B894D8 /* Character+CoreData.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -125,8 +125,8 @@
 				560AEC2F1ACB885C00B894D8 /* Model */,
 				560AEC2E1ACB885700B894D8 /* Controller */,
 				560AEC301ACB886100B894D8 /* View */,
-				564D0A4A1ACB212B00BF099D /* Images.xcassets */,
 				564D0A4C1ACB212B00BF099D /* LaunchScreen.xib */,
+				56D3B13D1ACCC4CF00512FA1 /* Images.xcassets */,
 				564D0A3A1ACB212B00BF099D /* Supporting Files */,
 			);
 			path = LostCharacters;
@@ -240,9 +240,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				564D0A491ACB212B00BF099D /* Main.storyboard in Resources */,
+				56D3B13E1ACCC4CF00512FA1 /* Images.xcassets in Resources */,
 				564D0A4E1ACB212B00BF099D /* LaunchScreen.xib in Resources */,
 				560AEC381ACC184600B894D8 /* lost.plist in Resources */,
-				564D0A4B1ACB212B00BF099D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,8 +264,8 @@
 				560AEC331ACB8A4E00B894D8 /* Character.m in Sources */,
 				564D0A401ACB212B00BF099D /* AppDelegate.m in Sources */,
 				564D0A461ACB212B00BF099D /* CharacterListViewController.m in Sources */,
-				560AEC361ACB8AC300B894D8 /* Character+CoreData.m in Sources */,
 				564D0A3D1ACB212B00BF099D /* main.m in Sources */,
+				5607A9D01ACC9578001BC436 /* AddCharacterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

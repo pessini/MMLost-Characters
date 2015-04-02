@@ -7,18 +7,17 @@
 //
 
 #import "CharacterListViewController.h"
+#import "AppDelegate.h"
 #import "Character.h"
-#import "Character+CoreData.h"
 
-@interface CharacterListViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface CharacterListViewController () <UITableViewDataSource, UITableViewDelegate, UITabBarDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *charactersTableView;
 @property NSArray *charactersArray;
+@property (nonatomic,strong) NSManagedObjectContext *managedObjectContext;
 
 @end
 
 @implementation CharacterListViewController
-
-@synthesize managedObjectContext;
 
 - (void)viewDidLoad
 {
@@ -30,24 +29,13 @@
 
     self.charactersArray = [NSArray new];
 
-//    NSManagedObject *character = [NSEntityDescription insertNewObjectForEntityForName:@"Character" inManagedObjectContext:managedObjectContext];
-//    [character setValue:@"Leandro Pessini" forKey:@"name"];
-//    [character setValue:@"Euuu" forKey:@"actor"];
-//    [managedObjectContext save:nil];
-
-    [self load];
-
-
+    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    self.managedObjectContext = delegate.managedObjectContext;
 }
-
--(void)load
+- (void)viewDidAppear:(BOOL)animated
 {
-    self.charactersArray = [Character_CoreData loadCharacters];
-
-    [self.charactersTableView reloadData];
-
-    NSLog(@"Array: %@", self.charactersArray);
-    NSLog(@"Count: %lu", (unsigned long)self.charactersArray.count);
+    [super viewDidAppear:animated];
+    [self loadDataUsingPredicate:nil];
 }
 
 #pragma mark -UITableViewDataSource
@@ -60,11 +48,76 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [self.charactersTableView dequeueReusableCellWithIdentifier:@"CharacterCell"];
-//    Character *character = [self.charactersArray objectAtIndex:indexPath.row];
+    NSManagedObject *character = [self.charactersArray objectAtIndex:indexPath.row];
 
-    cell.textLabel.text = @"Oi";
+    cell.textLabel.text = [character valueForKey:@"name"];
+
+    if ([[character valueForKey:@"age"] isEqualToValue:@0])
+    {
+        cell.detailTextLabel.text = @"";
+    }
+    else
+    {
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"Age: %@", [character valueForKey:@"age"]];
+    }
+
+    if ([character valueForKey:@"photo"] == nil)
+    {
+        if (![character valueForKey:@"gender"])
+        {
+            cell.imageView.image = [UIImage imageNamed:@"female_icon"];
+        }
+        else
+        {
+            cell.imageView.image = [UIImage imageNamed:@"male_icon"];
+        }
+
+    }
+    else
+    {
+        NSData *imageData = [character valueForKey:@"photo"];
+        cell.imageView.image = [UIImage imageWithData:imageData];
+    }
 
     return cell;
+}
+
+#pragma mark -UITabBarDelegate
+
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
+{
+    if(item.tag == 0)
+    {
+        [self loadDataUsingPredicate:@"gender == 0"];
+    }
+    else if (item.tag == 2)
+    {
+        [self loadDataUsingPredicate:@"gender == 1"];
+    }
+    else
+    {
+        [self loadDataUsingPredicate:nil];
+    }
+}
+
+- (void)loadDataUsingPredicate:(NSString *)predicate {
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Character"];
+
+
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    NSSortDescriptor *sortTwo = [[NSSortDescriptor alloc] initWithKey:@"gender" ascending:YES];
+
+    NSLog(@"%@", predicate);
+    if (predicate)
+    {
+        request.predicate = [NSPredicate predicateWithFormat:predicate];
+    }
+
+    request.sortDescriptors = @[sort, sortTwo];
+
+    self.charactersArray = [self.managedObjectContext executeFetchRequest:request error:nil];
+
+    [self.charactersTableView reloadData];
 }
 
 @end

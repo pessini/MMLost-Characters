@@ -19,6 +19,6 @@
 @property (nonatomic, retain) NSString * hair_color;
 @property (nonatomic, retain) NSString * plane_seat;
 @property (nonatomic, retain) NSString * occupation;
-@property (nonatomic, retain) NSData *photoData;
+@property (nonatomic, retain) NSData *photo;
 
 @end
