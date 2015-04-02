@@ -120,7 +120,6 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Lost Characters" id="bvo-3H-MEV">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="3lu-VF-OBz"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZbZ-Bq-cfK">
                             <connections>
                                 <segue destination="MDJ-hr-mLl" kind="presentation" identifier="AddSegue" id="nmI-Zx-Lhb"/>
@@ -296,16 +295,26 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bBn-8T-V3g">
+                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                <segments>
+                                    <segment title="Male"/>
+                                    <segment title="Female"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Bxe-Kx-IfW" secondAttribute="centerX" id="0GZ-VI-hfq"/>
+                            <constraint firstItem="bBn-8T-V3g" firstAttribute="top" secondItem="ZQR-BC-nWr" secondAttribute="bottom" constant="86" id="77Q-rJ-l7J"/>
                             <constraint firstItem="Bxe-Kx-IfW" firstAttribute="top" secondItem="ZQR-BC-nWr" secondAttribute="bottom" constant="8" id="8Y0-hM-yx0"/>
                             <constraint firstAttribute="centerX" secondItem="aHC-Op-0Qx" secondAttribute="centerX" id="Fk5-zV-Y5U"/>
                             <constraint firstAttribute="centerX" secondItem="qmT-BL-WSO" secondAttribute="centerX" id="Zam-ob-d1M"/>
                             <constraint firstItem="qmT-BL-WSO" firstAttribute="top" secondItem="aHC-Op-0Qx" secondAttribute="bottom" constant="30" id="apL-xA-ygI"/>
                             <constraint firstItem="aHC-Op-0Qx" firstAttribute="top" secondItem="OiU-Y0-J78" secondAttribute="bottom" constant="8" id="bJo-Jn-D09"/>
+                            <constraint firstAttribute="centerX" secondItem="bBn-8T-V3g" secondAttribute="centerX" id="gbX-U8-5vN"/>
                             <constraint firstAttribute="centerX" secondItem="ZQR-BC-nWr" secondAttribute="centerX" id="hi2-lk-bFP"/>
+                            <constraint firstItem="bBn-8T-V3g" firstAttribute="top" secondItem="Bxe-Kx-IfW" secondAttribute="bottom" constant="8" id="pou-mx-lKf"/>
                             <constraint firstItem="ZQR-BC-nWr" firstAttribute="top" secondItem="qmT-BL-WSO" secondAttribute="bottom" constant="25" id="s17-sG-6LI"/>
                         </constraints>
                         <variation key="default">
@@ -314,16 +323,20 @@
                                 <exclude reference="qmT-BL-WSO"/>
                                 <exclude reference="ZQR-BC-nWr"/>
                                 <exclude reference="Bxe-Kx-IfW"/>
+                                <exclude reference="bBn-8T-V3g"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="hi2-lk-bFP"/>
-                                <exclude reference="s17-sG-6LI"/>
-                                <exclude reference="Zam-ob-d1M"/>
-                                <exclude reference="apL-xA-ygI"/>
                                 <exclude reference="Fk5-zV-Y5U"/>
                                 <exclude reference="bJo-Jn-D09"/>
+                                <exclude reference="Zam-ob-d1M"/>
+                                <exclude reference="apL-xA-ygI"/>
+                                <exclude reference="hi2-lk-bFP"/>
+                                <exclude reference="s17-sG-6LI"/>
                                 <exclude reference="0GZ-VI-hfq"/>
                                 <exclude reference="8Y0-hM-yx0"/>
+                                <exclude reference="77Q-rJ-l7J"/>
+                                <exclude reference="gbX-U8-5vN"/>
+                                <exclude reference="pou-mx-lKf"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -332,16 +345,20 @@
                                 <include reference="qmT-BL-WSO"/>
                                 <include reference="ZQR-BC-nWr"/>
                                 <include reference="Bxe-Kx-IfW"/>
+                                <include reference="bBn-8T-V3g"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="hi2-lk-bFP"/>
-                                <include reference="s17-sG-6LI"/>
-                                <include reference="Zam-ob-d1M"/>
-                                <include reference="apL-xA-ygI"/>
                                 <include reference="Fk5-zV-Y5U"/>
                                 <include reference="bJo-Jn-D09"/>
+                                <include reference="Zam-ob-d1M"/>
+                                <include reference="apL-xA-ygI"/>
+                                <include reference="hi2-lk-bFP"/>
+                                <include reference="s17-sG-6LI"/>
                                 <include reference="0GZ-VI-hfq"/>
                                 <include reference="8Y0-hM-yx0"/>
+                                <include reference="77Q-rJ-l7J"/>
+                                <include reference="gbX-U8-5vN"/>
+                                <include reference="pou-mx-lKf"/>
                             </mask>
                         </variation>
                     </view>
@@ -361,6 +378,7 @@
                         <outlet property="actorTextField" destination="ZQR-BC-nWr" id="LM4-tZ-iiw"/>
                         <outlet property="ageTextField" destination="8H0-h7-487" id="F9x-9L-uHL"/>
                         <outlet property="characterNameTextField" destination="qmT-BL-WSO" id="kLt-Ah-D1p"/>
+                        <outlet property="genderSegmentedControl" destination="bBn-8T-V3g" id="IhC-RO-EvM"/>
                         <outlet property="photoImageView" destination="aHC-Op-0Qx" id="Hk9-li-WPI"/>
                         <outlet property="planeSeatTextField" destination="WFW-U2-JVE" id="SCd-QI-BwS"/>
                     </connections>

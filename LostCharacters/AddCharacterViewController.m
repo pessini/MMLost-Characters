@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *actorTextField;
 @property (weak, nonatomic) IBOutlet UITextField *planeSeatTextField;
 @property (weak, nonatomic) IBOutlet UITextField *ageTextField;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *genderSegmentedControl;
 @property (nonatomic,strong) NSManagedObjectContext *managedObjectContext;
 @end
 
@@ -85,7 +86,8 @@
     if ([self.characterNameTextField.text isEqualToString:@""] ||
         [self.actorTextField.text isEqualToString:@""] ||
         [self.ageTextField.text isEqualToString:@""] ||
-        [self.planeSeatTextField.text isEqualToString:@""])
+        [self.planeSeatTextField.text isEqualToString:@""] ||
+        self.genderSegmentedControl.selectedSegmentIndex == UISegmentedControlNoSegment)
     {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Something is missing"
                                                         message:@"Please make sure to enter all information"
@@ -106,6 +108,7 @@
         [character setValue:age forKey:@"age"];
 
         [character setValue:self.planeSeatTextField.text forKey:@"plane_seat"];
+        [character setValue:self.genderSegmentedControl forKey:@"gender"];
 
         NSData *imageData = UIImagePNGRepresentation(self.selectedImage);
         [character setValue:imageData forKey:@"photo"];

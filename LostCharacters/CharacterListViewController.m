@@ -140,5 +140,4 @@
 
     [self.charactersTableView reloadData];
 }
-
 @end
