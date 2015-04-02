@@ -134,7 +134,7 @@
             </objects>
             <point key="canvasLocation" x="1842" y="252"/>
         </scene>
-        <!--Add Character View Controller-->
+        <!--Add New Character-->
         <scene sceneID="Bk3-4o-9rP">
             <objects>
                 <viewController id="SQY-y6-PrR" customClass="AddCharacterViewController" sceneMemberID="viewController">
@@ -362,7 +362,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="Ub8-VQ-xaV">
+                    <navigationItem key="navigationItem" title="Add New Character" id="Ub8-VQ-xaV">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="rPL-my-QeB">
                             <connections>
                                 <action selector="onCancelButtonTapped:" destination="SQY-y6-PrR" id="Vjk-kM-Gdy"/>
@@ -424,6 +424,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tI6-so-y7w">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
