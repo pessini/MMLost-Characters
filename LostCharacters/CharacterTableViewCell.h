@@ -13,6 +13,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *characterImage;
 @property (weak, nonatomic) IBOutlet UILabel *actorLabel;
 @property (weak, nonatomic) IBOutlet UILabel *seatLabel;
-@property (weak, nonatomic) IBOutlet UILabel *gender;
+@property (weak, nonatomic) IBOutlet UILabel *age;
 
 @end

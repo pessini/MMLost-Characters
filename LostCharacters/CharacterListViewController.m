@@ -9,6 +9,7 @@
 #import "CharacterListViewController.h"
 #import "AppDelegate.h"
 #import "Character.h"
+#import "CharacterTableViewCell.h"
 
 @interface CharacterListViewController () <UITableViewDataSource, UITableViewDelegate, UITabBarDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *charactersTableView;
@@ -47,36 +48,38 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [self.charactersTableView dequeueReusableCellWithIdentifier:@"CharacterCell"];
+    CharacterTableViewCell *cell = [self.charactersTableView dequeueReusableCellWithIdentifier:@"CharacterCell"];
     NSManagedObject *character = [self.charactersArray objectAtIndex:indexPath.row];
 
-    cell.textLabel.text = [character valueForKey:@"name"];
+    cell.nameLabel.text = [character valueForKey:@"name"];
+    cell.actorLabel.text = [character valueForKey:@"actor"];
+    cell.seatLabel.text = [NSString stringWithFormat:@"Seat: %@",[character valueForKey:@"plane_seat"]];
 
     if ([[character valueForKey:@"age"] isEqualToValue:@0])
     {
-        cell.detailTextLabel.text = @"";
+        cell.age.text = @"";
     }
     else
     {
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"Age: %@", [character valueForKey:@"age"]];
+        cell.age.text = [NSString stringWithFormat:@"Age: %@", [character valueForKey:@"age"]];
     }
 
     if ([character valueForKey:@"photo"] == nil)
     {
         if (![character valueForKey:@"gender"])
         {
-            cell.imageView.image = [UIImage imageNamed:@"female_icon"];
+            cell.characterImage.image = [UIImage imageNamed:@"female_icon"];
         }
         else
         {
-            cell.imageView.image = [UIImage imageNamed:@"male_icon"];
+            cell.characterImage.image = [UIImage imageNamed:@"male_icon"];
         }
 
     }
     else
     {
         NSData *imageData = [character valueForKey:@"photo"];
-        cell.imageView.image = [UIImage imageWithData:imageData];
+        cell.characterImage.image = [UIImage imageWithData:imageData];
     }
 
     return cell;
