@@ -127,8 +127,6 @@
 
     NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
     NSSortDescriptor *sortTwo = [[NSSortDescriptor alloc] initWithKey:@"gender" ascending:YES];
-
-    NSLog(@"%@", predicate);
     if (predicate)
     {
         request.predicate = [NSPredicate predicateWithFormat:predicate];
